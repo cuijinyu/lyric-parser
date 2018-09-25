@@ -36,6 +36,6 @@ seek to correspond starTime
 
 toggle play state
 
-### resetLyric(targetLyric, startTime)
+#### resetLyric(targetLyric, startTime)
 
 reset lyrics to target lyrics with special startTime
