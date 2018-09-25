@@ -40,6 +40,7 @@ export default class Lyric {
   }
 
   _initLines() {
+    this.lines = []
     const lines = this.lrc.split('\n')
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i]
@@ -129,5 +130,12 @@ export default class Lyric {
 
   seek(offset) {
     this.play(offset)
+  }
+
+  resetLyric(newLyric, time = 0) {
+    this.lrc = newLyric
+    this._initLines()
+    this.seek(time)
+    this.stop()
   }
 }
